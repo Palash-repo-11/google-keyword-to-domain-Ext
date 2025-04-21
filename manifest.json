@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "version": "1.0.1",
+    "name": "fetch domains",
+    "description": "fetch domain from keyword",
+    "icons":{
+      "16":"Icon.png",
+      "24":"Icon.png",
+      "32":"Icon.png",
+      "48":"Icon.png",
+      "64":"Icon.png"
+  },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background":{
+      "service_worker":"background.js"
+    },
+    "permissions":["storage","tabs","notifications","scripting","downloads"]
+  }
+  
